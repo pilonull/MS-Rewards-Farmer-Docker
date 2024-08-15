@@ -80,7 +80,7 @@ services:
     volumes:
       - ./accounts.json:/app/accounts.json
       - ./sessions:/app/sessions
-      - ./tmp:/app/tmp
+      - ./tmp:/tmp
       - ./logs:/app/logs
     environment:
       - MSR_VISIBLE=true
@@ -130,6 +130,13 @@ In this table all the possible volume mappings are described
 |```/app/sessions```|chromes session folder (content can be deleted in case of errors)
 |```/app/logs```|logs of the bot
 |```/tmp```|temporary files like xvfb lock files (content can be deleted in case of errors)
+
+### Notifications
+Create your own config.yaml based on: https://github.com/klept0/MS-Rewards-Farmer/blob/master/config.yaml
+and map the volume:
+|Volume mapping|Description|
+|-|-|
+|```/app/config.yaml```|YAML config file containing config for notifications and retry attempts
 
 ### ENV variables
 In this table all the available enviroment variables are listed
