@@ -18,7 +18,8 @@ WORKDIR /app
 RUN git clone https://github.com/klept0/MS-Rewards-Farmer.git ./
 
 # install dependencies
-RUN pip install --root-user-action=ignore -r requirements.txt
+RUN pip install --root-user-action=ignore -r requirements.txt && \
+  pip install --root-user-action=ignore blinker
 
 # setting display enviroment stuff
 ENV DISPLAY=:99
