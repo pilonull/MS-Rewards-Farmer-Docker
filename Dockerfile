@@ -1,4 +1,4 @@
-FROM python
+FROM python:3.12-slim
 
 ARG CHROMEVERSION
 ARG CHROMEURL
@@ -18,8 +18,7 @@ WORKDIR /app
 RUN git clone https://github.com/klept0/MS-Rewards-Farmer.git ./
 
 # install dependencies
-RUN pip install --root-user-action=ignore -r requirements.txt && \
-  pip install --root-user-action=ignore blinker
+RUN pip install --root-user-action=ignore -r requirements.txt
 
 # setting display enviroment stuff
 ENV DISPLAY=:99
