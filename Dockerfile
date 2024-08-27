@@ -15,7 +15,7 @@ RUN google-chrome --version
 WORKDIR /app
 
 # clone the project
-RUN git clone https://github.com/Rippenkneifer/MS-Rewards-Farmer.git ./
+RUN git clone https://github.com/OmegaBlurz/MS-Rewards-Farmer.git ./
 
 # install dependencies
 RUN pip install --root-user-action=ignore -r requirements.txt
