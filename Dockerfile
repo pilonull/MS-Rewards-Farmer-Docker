@@ -22,8 +22,8 @@ ENV LANGUAGE en_US.UTF-8
 WORKDIR /app
 
 # clone the project
-#RUN git clone -b dev https://github.com/OmegaBlurz/MS-Rewards-Farmer.git ./
-RUN git clone -b develop https://github.com/klept0/MS-Rewards-Farmer.git ./
+RUN git clone -b dev https://github.com/OmegaBlurz/MS-Rewards-Farmer.git ./
+#RUN git clone -b develop https://github.com/klept0/MS-Rewards-Farmer.git ./
 
 # install dependencies
 RUN pip install --root-user-action=ignore -r requirements.txt
