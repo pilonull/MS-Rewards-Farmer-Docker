@@ -11,6 +11,13 @@ RUN wget -O /tmp/chrome.deb $CHROMEDLURL
 RUN apt-get update && apt-get install -y /tmp/chrome.deb xvfb
 RUN google-chrome --version
 
+# set locale
+RUN apt-get update
+RUN apt-get install -y locales locales-all
+ENV LC_ALL en_US.UTF-8
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US.UTF-8
+
 # create the app directory
 WORKDIR /app
 
